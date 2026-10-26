@@ -3,7 +3,7 @@ import XCTest
 
 final class FluxerClientTests: XCTestCase {
     func testDefaultServerURL() {
-        XCTAssertEqual(FluxerClient.defaultServerURL.absoluteString, "https://api.fluxer.app/v1")
+        XCTAssertEqual(FluxerClient.defaultServerURL.absoluteString, "https://fluxer.com/api/v1")
     }
 
     func testAuthorizationHeaderHelpers() {
