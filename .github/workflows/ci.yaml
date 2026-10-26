@@ -1,0 +1,24 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions: {}
+
+jobs:
+  build:
+    name: Build and test
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@b9e0990d219a03df7633c93f6f005a8fecbcab22
+
+      - name: Fetch OpenAPI spec
+        run: ./scripts/fetch_openapi.sh
+
+      - name: Build
+        run: swift build
+
+      - name: Test
+        run: swift test

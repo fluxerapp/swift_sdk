@@ -1,0 +1,8 @@
+.build/
+.swiftpm/
+openapi.json
+openapi.raw.json
+Sources/Fluxer/openapi.json
+DerivedData/
+*.xcodeproj
+*.xcworkspace
